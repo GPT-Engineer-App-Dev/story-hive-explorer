@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import SkeletonLoader from "./SkeletonLoader";
 
@@ -60,15 +61,21 @@ const HackerNews = () => {
               <span className="text-sm text-gray-600">
                 {story.points} upvotes
               </span>
-              <a
-                href={story.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-blue-500 hover:text-blue-700"
+              <Button
+                variant="outline"
+                size="sm"
+                asChild
               >
-                Read more
-                <ExternalLink className="ml-1 h-4 w-4" />
-              </a>
+                <a
+                  href={story.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  Read more
+                  <ExternalLink className="ml-1 h-4 w-4" />
+                </a>
+              </Button>
             </div>
           </li>
         ))}
