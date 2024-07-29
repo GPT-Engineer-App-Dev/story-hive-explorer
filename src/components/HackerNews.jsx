@@ -62,9 +62,10 @@ const HackerNews = () => {
                 {story.points} upvotes
               </span>
               <Button
-                variant="outline"
+                variant="secondary"
                 size="sm"
                 asChild
+                className="bg-pink-500 hover:bg-pink-600 text-white"
               >
                 <a
                   href={story.url}
